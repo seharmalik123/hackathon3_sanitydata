@@ -1,23 +1,13 @@
 
 export interface Product {
     _id: string;
-    name:string;
+    name: string;
     price: number;
     description: string;
-    category: string;
+    image: string;
+    category: 'tshirt' | 'short' | 'jeans' | 'hoodie' | 'shirt';
     discountPercent: number;
-    new: string;
-    colors: string;
-    sizes: string;
-    image?:{
-        asset : {
-            _ref : string;
-            _type : "image";
-        },
-        slug: {
-            _type: "slug",
-            current: string;
-        };
-} 
-
-}
+    new: boolean;
+    colors: string[];
+    sizes: string[];
+  }

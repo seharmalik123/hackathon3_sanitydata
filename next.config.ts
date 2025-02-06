@@ -1,11 +1,14 @@
-import type { NextConfig } from "next";
-
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  images: {
-    domains: ['cdn.sanity.io'], // Add other domains if needed
-  },
-};
-
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	images: {
+	  domains: [
+		'cdn.sanity.io',
+		'images.unsplash.com',
+		'fakestoreapi.com', // Add fakestoreapi.com here
+	  ],
+	},
+	staticPageGenerationTimeout: 120,
+  };
+  
+  module.exports = nextConfig;
+  

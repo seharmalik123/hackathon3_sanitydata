@@ -15,7 +15,7 @@ export default defineType({
             title: "Slug",
             type: "slug",
             options: {
-                source: "title",
+                source: "name",
             }
         },
         {
@@ -24,6 +24,11 @@ export default defineType({
         type: 'number',
         },
         {
+        name: 'inventory',
+        title: 'Inventory',
+        type: 'number',
+        },
+         {
         name: 'description',
         title: 'Description',
         type: 'text',

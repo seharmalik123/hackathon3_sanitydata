@@ -8,3 +8,6 @@ export const client = createClient({
   apiVersion,
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
+export async function getProductBySlug(slug: string) {
+  return client.fetch(`*[_type == "product" && slug.current == $slug][0]`, { slug });
+}
